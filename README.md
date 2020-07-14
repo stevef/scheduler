@@ -7,5 +7,4 @@
 * Appointments can be entered to a specific hour inline, and the 'save' button saves them to local storage.
 * This application uses jquery and moment.js, and Bootstrap.
 
-![GitHub Logo](/assets/scheduler.png)
-Format: ![Alt Text](url)
+![Image of scheduler](https://github.com/jourdancase1/scheduler/blob/master/assets/scheduler.jpg)
