@@ -132,23 +132,25 @@
       }
     });
     // save item to local storage 
-    $(".saveBtn").on("click", function(){
+    $(".saveBtn").click(function(){
 
-      var text = $(".time-block").val();
+      var input = $(this).closest('tr').find('.time-block');
+      var text = $(input).val();
+      var id = $(input).attr('id')
 
-      localStorage.setItem("schedule", JSON.stringify(text))
-    })
+      localStorage.setItem(`${id}`, text);
+    });
   
     // recall item from local storage 
-    $("#9").text(localStorage.getItem("#9"));
-    $("#10 .time-block").val(localStorage.getItem("10"));
-    $("#11 .time-block").val(localStorage.getItem("11"));
-    $("#12 .time-block").val(localStorage.getItem("12"));
-    $("#13 .time-block").val(localStorage.getItem("13"));
-    $("#14 .time-block").val(localStorage.getItem("14"));
-    $("#15 .time-block").val(localStorage.getItem("15"));
-    $("#16 .time-block").val(localStorage.getItem("16"));
-    $("#17 .time-block").val(localStorage.getItem("17"));
+    $("#9").val(localStorage.getItem("9"));
+    $("#10").val(localStorage.getItem("10"));
+    $("#11").val(localStorage.getItem("11"));
+    $("#12").val(localStorage.getItem("12"));
+    $("#13").val(localStorage.getItem("13"));
+    $("#14").val(localStorage.getItem("14"));
+    $("#15").val(localStorage.getItem("15"));
+    $("#16").val(localStorage.getItem("16"));
+    $("#17").val(localStorage.getItem("17"));
 
     function setColor(element, color) {
       element.style.backgroundColor = color;
